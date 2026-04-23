@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öz-Nev Nakliyat & Lojistik | 2026 Güncel Fiyat Listesi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        
+        :root {
+            --brand-red: #E31E24;
+            --brand-blue: #2E3192;
+            --brand-dark: #1a1a1a;
+        }
+        
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .bg-brand-red { background-color: var(--brand-red); }
+        .text-brand-red { color: var(--brand-red); }
+        .bg-brand-blue { background-color: var(--brand-blue); }
+        .text-brand-blue { color: var(--brand-blue); }
+        
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .price-table tr:nth-child(even) { background-color: #f8fafc; }
+        .price-table tr:hover { background-color: #f1f5f9; transition: 0.2s; }
+
+        /* Sayfa geçiş animasyonu */
+        .page-content { display: none; animation: fadeIn 0.4s ease-in-out; }
+        .page-content.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Üst Bilgi Barı -->
+    <div class="bg-brand-blue text-white py-2 px-4 hidden md:block">
+        <div class="container mx-auto flex justify-between items-center text-sm">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-envelope mr-2"></i> oznevnakliyatt@gmail.com</span>
+                <span><i class="fas fa-map-marker-alt mr-2"></i> Hadımköy & Arnavutköy Şubeleri</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-red-400"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-red-400"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasyon -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2 cursor-pointer" onclick="showPage('home')">
+                <div class="text-3xl font-bold italic">
+                    <span class="text-brand-blue">ÖZ-</span><span class="text-brand-red">NEV</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 font-semibold uppercase text-sm tracking-wider">
+                <a href="javascript:void(0)" onclick="showPage('home')" class="hover:text-brand-red transition">Anasayfa</a>
+                <a href="javascript:void(0)" onclick="showPage('prices')" class="text-brand-red font-bold transition">Fiyat Listesi</a>
+                <a href="#hizmetler" onclick="showPage('home')" class="hover:text-brand-red transition">Hizmetlerimiz</a>
+                <a href="#iletisim" class="hover:text-brand-red transition">İletişim</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <div class="hidden lg:block text-right border-l pl-4 border-gray-200">
+                    <span class="text-[10px] text-gray-500 font-bold block uppercase leading-none">Müşteri Hattı</span>
+                    <a href="tel:05363556880" class="text-brand-blue font-extrabold text-lg">0536 355 68 80</a>
+                </div>
+                <button class="md:hidden text-2xl" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-brand-blue"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ANASAYFA İÇERİĞİ -->
+    <main id="home-page" class="page-content active">
+        <!-- Hero Section -->
+        <section class="hero-gradient h-[550px] flex items-center text-white px-4">
+            <div class="container mx-auto">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+                        2026'da Da <br><span class="text-brand-red italic underline">Güvenle</span> Taşıyoruz
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 opacity-90 border-l-4 border-brand-red pl-4">
+                        Arnavutköy ve Hadımköy merkezli, İstanbul'un her noktasına kurumsal B2B taşımacılık çözümleri.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="showPage('prices')" class="bg-brand-red hover:bg-red-700 text-white px-8 py-4 rounded-md font-bold transition transform hover:scale-105 shadow-lg flex items-center">
+                            <i class="fas fa-list-ul mr-2"></i> GÜNCEL FİYAT LİSTESİ
+                        </button>
+                        <a href="tel:05426738768" class="bg-white text-brand-blue hover:bg-gray-100 px-8 py-4 rounded-md font-bold transition flex items-center shadow-lg">
+                            <i class="fas fa-phone-alt mr-2"></i> HEMEN ARA
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hızlı Özet -->
+        <div class="container mx-auto -mt-16 relative z-10 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-brand-blue">
+                    <i class="fas fa-truck-moving text-4xl text-brand-red mb-4"></i>
+                    <h3 class="font-bold text-xl text-brand-blue mb-1">Geniş Filo</h3>
+                    <p class="text-gray-500 text-sm">Panelvandan 10 tekere her ihtiyaca uygun araç.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-brand-blue">
+                    <i class="fas fa-clock text-4xl text-brand-red mb-4"></i>
+                    <h3 class="font-bold text-xl text-brand-blue mb-1">Dakik Teslimat</h3>
+                    <p class="text-gray-500 text-sm">Sanayi bölgelerinde profesyonel zaman yönetimi.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-brand-blue">
+                    <i class="fas fa-check-circle text-4xl text-brand-red mb-4"></i>
+                    <h3 class="font-bold text-xl text-brand-blue mb-1">Sabit Fiyat</h3>
+                    <p class="text-gray-500 text-sm">Süpriz maliyet yok, şeffaf fiyat politikası.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hizmetlerimiz -->
+        <section id="hizmetler" class="py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Kurumsal Çözümlerimiz</h2>
+                <div class="w-20 h-1 bg-brand-red mx-auto mb-16"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <i class="fas fa-industry text-3xl text-brand-blue mb-4"></i>
+                        <h4 class="font-bold mb-2">Hadımköy Lojistik</h4>
+                        <p class="text-gray-500 text-sm">Fabrika ve imalathane sevkiyatlarında bölge uzmanlığı.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <i class="fas fa-city text-3xl text-brand-blue mb-4"></i>
+                        <h4 class="font-bold mb-2">Şehir İçi Dağıtım</h4>
+                        <p class="text-gray-500 text-sm">İstanbul genelinde 39 ilçeye günlük rota planlama.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <i class="fas fa-boxes text-3xl text-brand-blue mb-4"></i>
+                        <h4 class="font-bold mb-2">B2B Taşımacılık</h4>
+                        <p class="text-gray-500 text-sm">Firmadan firmaya düzenli sözleşmeli sevkiyatlar.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition">
+                        <i class="fas fa-warehouse text-3xl text-brand-blue mb-4"></i>
+                        <h4 class="font-bold mb-2">Geçici Depolama</h4>
+                        <p class="text-gray-500 text-sm">Hızlı sirkülasyon gerektiren yükler için ara depo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FİYAT LİSTESİ SAYFASI -->
+    <main id="prices-page" class="page-content py-12 px-4">
+        <div class="container mx-auto">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+                <!-- Başlık Alanı -->
+                <div class="bg-brand-blue p-8 text-white text-center">
+                    <h2 class="text-3xl font-extrabold mb-2 uppercase tracking-tight">2026 Güncel Nakliye Fiyat Listesi</h2>
+                    <p class="text-blue-100 text-sm opacity-80">İstanbul Arnavutköy ve Hadımköy Çıkışlı Nakliye Bedelleri</p>
+                    
+                    <!-- Arama Kutusu -->
+                    <div class="mt-8 max-w-xl mx-auto relative">
+                        <input type="text" id="searchInput" onkeyup="searchPrice()" placeholder="Bölge veya ilçe ara (Örn: Beşiktaş, İkitelli...)" class="w-full py-4 px-12 rounded-full text-gray-800 focus:ring-4 focus:ring-brand-red outline-none shadow-lg">
+                        <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                </div>
+
+                <!-- Tablo Alanı -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left price-table">
+                        <thead class="bg-gray-100 text-brand-blue uppercase text-xs font-bold border-b-2 border-gray-200">
+                            <tr>
+                                <th class="px-6 py-4">Bölge / İlçe</th>
+                                <th class="px-6 py-4"><i class="fas fa-shuttle-van mr-2"></i>Panelvan</th>
+                                <th class="px-6 py-4"><i class="fas fa-truck mr-2"></i>Kamyonet</th>
+                                <th class="px-6 py-4"><i class="fas fa-truck-pickup mr-2"></i>Ortaboy</th>
+                                <th class="px-6 py-4"><i class="fas fa-truck-loading mr-2"></i>10 Teker</th>
+                            </tr>
+                        </thead>
+                        <tbody id="priceTableBody" class="text-sm font-medium">
+                            <!-- Veriler JS ile buraya basılacak -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Uyarı Notu -->
+                <div class="p-6 bg-yellow-50 border-t border-yellow-100 text-yellow-800 text-xs italic flex items-start space-x-3">
+                    <i class="fas fa-info-circle mt-0.5 text-lg"></i>
+                    <p>Fiyatlarımız bölge yoğunluğu ve yol durumuna göre değişiklik gösterebilir. B2B anlaşmaları ve toplu taşımalar için lütfen özel teklif isteyiniz. Belirtilen fiyatlar tek yön taşıma bedelidir.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- İletişim & Footer -->
+    <footer id="iletisim" class="bg-brand-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="text-3xl font-bold italic mb-4">
+                        <span class="text-brand-blue">ÖZ-</span><span class="text-brand-red">NEV</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-6">Kurumsal lojistik ve taşımacılıkta 2026 vizyonu ile her zaman bir adım öndeyiz.</p>
+                    <div class="flex space-x-4">
+                        <a href="tel:05426738768" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-red transition"><i class="fas fa-phone"></i></a>
+                        <a href="mailto:oznevnakliyatt@gmail.com" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-red transition"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-6 text-brand-blue uppercase text-sm tracking-widest">Hızlı Menü</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="javascript:void(0)" onclick="showPage('home')" class="hover:text-brand-red transition">Anasayfa</a></li>
+                        <li><a href="javascript:void(0)" onclick="showPage('prices')" class="hover:text-brand-red transition">Fiyat Listesi</a></li>
+                        <li><a href="#hizmetler" onclick="showPage('home')" class="hover:text-brand-red transition">Hizmetlerimiz</a></li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-2">
+                    <h4 class="font-bold text-lg mb-6 text-brand-blue uppercase text-sm tracking-widest">Merkez Ofislerimiz</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-400 leading-relaxed">
+                        <p><strong class="text-white block">Hadımköy Şube:</strong> Mehmet Akif Ersoy Mah. Egemen Cad. No: 99 Arnavutköy/İSTANBUL</p>
+                        <p><strong class="text-white block">Arnavutköy Şube:</strong> Merkez mah. operasyon ve dağıtım noktası.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-xs text-gray-600 uppercase tracking-tighter">
+                &copy; 2026 ÖZ-NEV NAKLİYAT & LOJİSTİK | TÜM HAKLARI SAKLIDIR.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp ve Hızlı Arama Butonları -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <!-- Telefon Butonu (0542 673 87 68) -->
+        <a href="tel:05426738768" class="bg-brand-blue text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-2xl hover:scale-110 transition duration-300">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+        <!-- WhatsApp Butonu (0536 355 68 80) -->
+        <a href="https://wa.me/905363556880" target="_blank" rel="noopener noreferrer" class="bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-green-600 hover:scale-110 transition duration-300">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script>
+        // Veri Seti (Belgeden Alınan Rakamlar)
+        const priceData = [
+            { bolge: "ARNAVUTKÖY", panel: "2400", kamyonet: "2800", orta: "3400", t10: "4500" },
+            { bolge: "HADIMKÖY", panel: "2400", kamyonet: "2700", orta: "3400", t10: "4500" },
+            { bolge: "ESENYURT", panel: "2600", kamyonet: "3100", orta: "3650", t10: "5000" },
+            { bolge: "AVCILAR", panel: "2700", kamyonet: "3150", orta: "3900", t10: "5500" },
+            { bolge: "FİRUZKÖY", panel: "2700", kamyonet: "3150", orta: "3900", t10: "5500" },
+            { bolge: "ALTINŞEHİR", panel: "2600", kamyonet: "3150", orta: "3600", t10: "5500" },
+            { bolge: "SULTANGAZİ", panel: "2700", kamyonet: "3250", orta: "3650", t10: "5500" },
+            { bolge: "İKİTELLİ", panel: "2700", kamyonet: "3200", orta: "3900", t10: "5500" },
+            { bolge: "HABİPLER", panel: "2700", kamyonet: "3200", orta: "3650", t10: "5500" },
+            { bolge: "BEYLİKDÜZÜ", panel: "2700", kamyonet: "3350", orta: "3900", t10: "5900" },
+            { bolge: "BAĞCILAR", panel: "2700", kamyonet: "3300", orta: "3900", t10: "6000" },
+            { bolge: "YENİBOSNA", panel: "2700", kamyonet: "3300", orta: "3900", t10: "6000" },
+            { bolge: "GÜNEŞLİ", panel: "2700", kamyonet: "3300", orta: "3900", t10: "6000" },
+            { bolge: "MAHMUTBEY", panel: "2700", kamyonet: "3300", orta: "3900", t10: "6000" },
+            { bolge: "HALKALI", panel: "2700", kamyonet: "3300", orta: "3900", t10: "6000" },
+            { bolge: "SEFAKÖY", panel: "2700", kamyonet: "3300", orta: "3900", t10: "6000" },
+            { bolge: "K.ÇEKMECE", panel: "2700", kamyonet: "3100", orta: "3900", t10: "6000" },
+            { bolge: "KÜÇÜKKÖY", panel: "2700", kamyonet: "3300", orta: "3900", t10: "6000" },
+            { bolge: "MERTER", panel: "2850", kamyonet: "3400", orta: "3900", t10: "6000" },
+            { bolge: "TOPKAPI", panel: "2850", kamyonet: "3400", orta: "3900", t10: "6000" },
+            { bolge: "BAYRAMPAŞA", panel: "2850", kamyonet: "3400", orta: "3900", t10: "6000" },
+            { bolge: "B.EVLER", panel: "2900", kamyonet: "3300", orta: "3900", t10: "6000" },
+            { bolge: "B.ÇEKMECE", panel: "2850", kamyonet: "3300", orta: "4200", t10: "6300" },
+            { bolge: "EYÜP", panel: "2900", kamyonet: "3500", orta: "4400", t10: "7000" },
+            { bolge: "FLORYA", panel: "2850", kamyonet: "3300", orta: "4100", t10: "6500" },
+            { bolge: "ZEYTİNBURNU", panel: "2900", kamyonet: "3300", orta: "4100", t10: "6500" },
+            { bolge: "ŞİŞLİ", panel: "2900", kamyonet: "3500", orta: "4400", t10: "7500" },
+            { bolge: "MECİDİYEKÖY", panel: "2900", kamyonet: "3500", orta: "4400", t10: "7500" },
+            { bolge: "MASLAK", panel: "2900", kamyonet: "3500", orta: "4400", t10: "7500" },
+            { bolge: "LEVENT", panel: "2900", kamyonet: "3500", orta: "4400", t10: "7500" },
+            { bolge: "BEŞİKTAŞ", panel: "3000", kamyonet: "3700", orta: "4900", t10: "8000" },
+            { bolge: "TAKSİM", panel: "2900", kamyonet: "3500", orta: "4650", t10: "8000" },
+            { bolge: "FATİH", panel: "2900", kamyonet: "3500", orta: "4650", t10: "8000" },
+            { bolge: "EMİNÖNÜ", panel: "2900", kamyonet: "3500", orta: "4650", t10: "8000" },
+            { bolge: "KADIKÖY", panel: "4000", kamyonet: "4500", orta: "7000", t10: "9000" },
+            { bolge: "ÜMRANİYE", panel: "4000", kamyonet: "4500", orta: "7000", t10: "9000" },
+            { bolge: "DUDULLU", panel: "4000", kamyonet: "4500", orta: "7000", t10: "9000" },
+            { bolge: "TUZLA", panel: "4250", kamyonet: "4850", orta: "7000", t10: "9000" },
+            { bolge: "GEBZE", panel: "4500", kamyonet: "5100", orta: "7500", t10: "9500" },
+            { bolge: "ÇERKEZKÖY", panel: "4250", kamyonet: "4750", orta: "6250", t10: "8250" },
+            { bolge: "ÇORLU", panel: "4500", kamyonet: "5000", orta: "6600", t10: "8750" },
+            { bolge: "İST.HAVALİMANI", panel: "3300", kamyonet: "3800", orta: "4500", t10: "7000" }
+        ];
+
+        // Sayfa Değiştirme Fonksiyonu
+        function showPage(pageId) {
+            document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId + '-page').classList.add('active');
+            window.scrollTo(0, 0);
+            
+            // Eğer fiyat sayfası açılıyorsa tabloyu yükle
+            if(pageId === 'prices') renderTable(priceData);
+        }
+
+        // Tabloyu Oluştur
+        function renderTable(data) {
+            const tbody = document.getElementById('priceTableBody');
+            tbody.innerHTML = '';
+            data.forEach(item => {
+                const row = `
+                    <tr class="border-b border-gray-100">
+                        <td class="px-6 py-4 font-bold text-gray-700 uppercase">${item.bolge}</td>
+                        <td class="px-6 py-4 text-brand-blue">${item.panel} TL</td>
+                        <td class="px-6 py-4 text-brand-blue">${item.kamyonet} TL</td>
+                        <td class="px-6 py-4 text-brand-blue">${item.orta} TL</td>
+                        <td class="px-6 py-4 text-brand-blue">${item.t10} TL</td>
+                    </tr>
+                `;
+                tbody.innerHTML += row;
+            });
+        }
+
+        // Arama Fonksiyonu
+        function searchPrice() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = priceData.filter(item => item.bolge.toLowerCase().includes(query));
+            renderTable(filtered);
+        }
+
+        // İlk Yükleme
+        window.onload = () => {
+            renderTable(priceData);
+        };
+    </script>
+</body>
+</html>
